@@ -3,7 +3,7 @@ name: Build and Scan
 # TODO: トリガーを指定する
 on:
   push:
-    branches: [ todo ]
+    branches: [ handson ]
 
 jobs:
   build:
