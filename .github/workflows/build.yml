@@ -29,7 +29,7 @@ jobs:
         # Build app by Gradle
         ./gradlew bootJar
         # Build docker image
-        docker build -t ${{ secrets.JFROG_URL }}/handson-docker/sample:latest .
+        docker build -t ${{ secrets.JFROG_URL }}/handson-docker/sample-app:latest .
         # Register JFROG SaaS server
         jfrog c add my-jfrog-server --url=https://${{ secrets.JFROG_URL }} --user=${{ secrets.JFROG_USER }} --password=${{ secrets.JFROG_API_KEY }}
         # Push docker image
