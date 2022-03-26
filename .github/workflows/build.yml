@@ -36,8 +36,8 @@ jobs:
         jfrog rt dp ${{ secrets.JFROG_URL }}/handson-docker/sample-app:latest handson-docker --build-name=handson-build --build-number=${{ env.JFROG_CLI_BUILD_NUMBER }} --server-id=my-jfrog-server
         # Add some usefull infomation
         jfrog rt bce handson-build ${{ env.JFROG_VLI_BUILD_NUMBER }}
-        jfrog rt bp handson-build ${{ env.JFROG_CLE_BUILD_NUMBER }}
+        jfrog rt bp handson-build ${{ env.JFROG_CLI_BUILD_NUMBER }}
         
     # TODO: 脆弱性のスキャンを行う
-    - name: Scan artifacts
-      run: jfrog rt bs handson-build ${{ env.JFROG_CLI_BUILD_NUMBER }}
+#    - name: Scan artifacts
+#      run: jfrog rt bs handson-build ${{ env.JFROG_CLI_BUILD_NUMBER }}
